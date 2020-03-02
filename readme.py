@@ -17,18 +17,23 @@ git status
 
 # Even though git is aware of the file, it has not been added to the project
 
-git add readme.txt
+git add readme.txt ( add individual files )
+git add -A ( add all files where changes have been made )
 git status
 
 # Your First commit, commit is a record of the file you have changed within the project
 # Before we do this, we have to inform Git who we are
+# If you are working with other developers they need to know who is making the changes
 
 git config --global user.email senthilcaesar@yahoo.co.in
 git config --global user.name senthilcaesar
+git config --list
+git help config
+git log
 
 # New we can create the commit
 
-git commit -m "test message"
+git commit -m "External dependecnies removed"
 
 # Create a branch and push it to GitHub
 
@@ -64,3 +69,42 @@ git clone -b remove-ext-dep https://github.com/pnlbwh/CNN-Diffusion-MRIBrain-Seg
 	
 # When the user wants to intall your module from pip python or conda packages
 # you will have to release your developed code in the github release tab
+
+# Example 2
+	# Initialize a repository from local existing code
+		git init
+
+	# If you want to stop tracking your repository, then remove the .git folder
+		rm -rf .git
+
+	# If you want to ignore few files from tracking , you have to create a .gitignore file
+	# gitingnore file is a simple text file where we can add files that we want git to ignore
+		*.pyc ( ignores all files with .pyc extension )
+
+# Example 3
+	# Track an existing github repository, the downaloded folder will already have a .git folder
+		git clone https://github.com/SenthilCaesar/CNN-Brain-MRI-Segmentation.git
+
+	# View information about the existing github repository
+		git branch -a ( list all branches )
+		git remote -v 
+
+	 # Show me the changes that I have made to the code
+	 	git diff 
+	 	git status
+	 	git add -A
+	 	git status
+	 	# now they are ready to be commited
+
+	 # commit the changes locally
+	 	git commit -m "multiply function added"
+
+	 # Now we made changes locally , we want to push the changes to the remote github repository
+	 # There are two things you want to do, git pull and git push 
+	 # We are working on a project that could have mutiple developers
+	 # And people have been pushing code to the remote repository, while you have been working on the features locally
+	 	git pull origin master
+	 	git push origin master 
+
+	 # If you want to switch to different branch
+	 	git checkout branchname

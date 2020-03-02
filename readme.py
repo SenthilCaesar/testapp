@@ -40,12 +40,12 @@ git branch
 # After creating the repository you will be presented with a URL to use for pushing our new created local repository
 
 git remote add origin https://github.com/SenthilCaesar/testapp
-git push -u origin master
+git push -u origin game
 
 # Pulling the project
 # Say your collaborators make changes to the code on the GitHub project and have merged those changes
 
-git pull origin master
+git pull origin game
 
 # clone branch
 git clone -b remove-ext-dep https://github.com/pnlbwh/CNN-Diffusion-MRIBrain-Segmentation

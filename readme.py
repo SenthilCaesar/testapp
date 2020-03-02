@@ -61,3 +61,6 @@ git clone -b remove-ext-dep https://github.com/pnlbwh/CNN-Diffusion-MRIBrain-Seg
 
 	# make the changes and commit it
 	git push -u origin clean-imports
+	
+# When the user wants to intall your module from pip python or conda packages
+# you will have to release your developed code in the github release tab

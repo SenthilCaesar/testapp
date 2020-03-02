@@ -49,3 +49,15 @@ git pull origin master
 
 # clone branch
 git clone -b remove-ext-dep https://github.com/pnlbwh/CNN-Diffusion-MRIBrain-Segmentation
+
+
+
+# Example1
+	# Pull the latest changes from branch
+	git pull origin remove-ext-dep
+
+	# Create new branch
+	git checkout -b clean-imports
+
+	# make the changes and commit it
+	git push -u origin clean-imports
